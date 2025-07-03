@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mobiles | The Creative Hub</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="mobile.css">
+        <script src="jquery.min.js"></script>
+        <script src="animation.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- Navbar -->
+            <header class="header">
+                <div class="logo"><img src="logo1.png" id="log" alt=""></div>        
+                <nav class="navigation">
+                  <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">Products</a>
+                        <ul>
+                            <li><a href="mobile.html">Mobile Phones</a></li>
+                            <li><a href="laptop.html"> Laptop </a> </li>
+                            <li><a href="homeappliances.html">Home Appliances</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a class="feed">FeedBack</a></li>
+                    <li><a href="index.html">Log Out</a></li>
+                  </ul>
+                </nav>
+              </header>
+              <div class="feedback">
+                <div class="container_feed">
+                    <form action="mobile.html" method="post">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="feed_name" name="name" placeholder="Enter Name">
+                        <label for="email">Email:</label>
+                        <input type="pass" id="feed_email" name="email" placeholder="Enter Email Address">
+                        <label for="rating">Rating:</label>
+                        <select id="rating" name="rating">
+                            <option value="5">5 - Excellent</option>
+                            <option value="4">4 - Very Good</option>
+                            <option value="3">3 - Good</option>
+                            <option value="2">2 - Fair</option>
+                            <option value="1">1 - Poor</option>
+                        </select>
+            
+                        <label for="comments">Comments:</label>
+                        <textarea id="feed_comment" name="comments" rows="3" placeholder="Write Your Comments Here"></textarea>
+            
+                        <div class="product-feedback">
+                            <label for="product">Product Feedback (optional):</label>
+                            <input type="text" id="product" name="product">
+            
+                            <label for="improvements">Suggestions for Improvements (optional):</label>
+                            <textarea id="improvements" name="improvements" rows="3"></textarea>
+                        </div>
+            
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="subscribe" name="subscribe" checked>
+                            <label>Subscribe to receive future updates</label>
+                        </div>
+            
+                        <button type="submit" onclick=" return feedback()">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+              <div class="order">
+                <div class="containerorder">
+                    <div class="left">
+                        <h3>BILLING ADDRESS</h3>
+                        <form>
+                            Full name
+                            <input type="text" class="inputs" id="fname" placeholder="Enter name">
+                            Email
+                            <input type="text" id="eml" class="inputs" placeholder="Enter email">
+            
+                            Address
+                            <input type="text" id="add" class="inputs" placeholder="Enter address">
+                            
+                            City
+                            <input type="text" id="city" class="inputs" placeholder="Enter City">
+                            <div id="zip">
+                                <label>
+                                    State
+                                    <input type="text" class="inputs" placeholder="Enter State" id="state">
+                                </label>
+                                    <label>
+                                        Zip code
+                                    <input type="text" class="inputs" id="zipcode" placeholder="Zip code">
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <h3>Order Details</h3>
+                        <form onsubmit="return conOrder()">
+                            <h3> Product Name :-</h3>
+                            <h4 id="proname"></h4> 
+                            <h3> Price :-</h3>
+                            <h4 id="proprice"></h4>
+                            <h3>Quantity :- <input type="text" id="qun" value="1" onchange="updateProductDetails()"></h4>
+                            <div id="qunErr"></div>
+                            <h3 id="tot"> Total Price :-</h3>
+                            <h4 id="totprice"></h4>                
+                            <input type="submit"  value="Proceed to Checkout"><input type="button" onclick="clearOrder()" class="clsord" value="Close" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="containerslider">
+                <div class="wrapper">
+                    <img src="mad1.png" class="slider">
+                    <img src="mad2.png" class="slider">
+                    <img src="mad3.png" class="slider">
+                    <img src="mad4.png" class="slider">
+                </div>
+            </div>
+        </div>
+        <center><h1 class="heading">Mobiles</h1></center>
+        <div class="procon-container">
+            <div class="procon">
+                <div class="proimg1">
+                    <img src="apple.png">
+                </div>
+                <div class="prodet1">
+                    <h3>Apple iPhone 14</h3>
+                    <b><p>Price&nbsp; : &nbsp;</b>&#8377; 58,999</p>
+                    <button class="detbtn1">More Details</button><button class="imgbtn1">More Photos</button><button class="orbtn1" onclick="mobile1()">Order</button>
+                    <p><li class="details1">128 GB ROM</li>
+                        <li class="details1">15.49 cm (6.1 inch)</li>
+                        <li class="details1">12MP + 12MP  </li>
+                        <li class="details1">A15 Bionic Chip</li>
+                    </p>    
+                </div>
+                <div class="proimgs1">
+                    <img src="apple1.png">
+                    <img src="apple2.png">
+                    <img src="apple3.png">
+                </div>
+            </div>
+            <div class="procon">
+                <div class="proimg2">
+                    <img src="sa14.png">
+                </div>
+                <div class="prodet2">
+                    <h3>SAMSUNG Galaxy A14 5G</h3>
+                    <b><p>Price&nbsp; : &nbsp;</b>&#8377; 16,499</p>
+                    <button class="detbtn2">More Details</button><button class="imgbtn2">More Photos</button><button class="orbtn1" onclick="mobile2()">Order</button>
+                    <p><li class="details2">6 GB RAM | 128 GB ROM |</li>
+                        <li class="details2">16.76 cm (6.6 inch) HD+ Display</li>
+                        <li class="details2">50MP + 2MP | 13MP Front Camera</li>
+                        <li class="details2">5000 mAh Lithium Ion Battery</li>
+                    </p>
+                </div>
+                <div class="proimgs2">
+                    <img src="sa1.png">
+                    <img src="sa2.png">
+                    <img src="sa3.png">
+                </div>
+            </div>
+        </div>
+        <div class="procon-container">
+            <div class="procon">
+                <div class="proimg3">
+                    <img src="Apple iPhone 14 Pro Max .jpg">
+                </div>
+                <div class="prodet3">
+                    <h3>Iphone 14 Pro</h3>
+                    <b><p>Price&nbsp; : &nbsp;</b>&#8377; 89,999</p>
+                    <button class="detbtn3">More Details</button><button class="imgbtn3">More Photos</button><button class="orbtn1" onclick="mobile3()">Order</button>
+                    <p><li class="details3">4 GB RAM | 64 GB ROM | Expandable Upto 1 GB</li>
+                        <li class="details3">17.02 cm (6.7 inch) HD+ Display</li>
+                        <li class="details3">50MP + 5MP | 8MP Front Camera</li>
+                        <li class="details3">MediaTek Helio G85 Processor</li>
+                    </p>    
+                </div>
+                <div class="proimgs3">
+                    <img src="ap1.png.jpg">
+                    <img src="ap2.png.jpg">
+                    <img src="ap3.jpg">
+                </div>
+            </div>
+            <div class="procon">
+                <div class="proimg4">
+                    <img src="redmi A1.jpg">
+                </div>
+                <div class="prodet4">
+                    <h3>Redmi A1</h3>
+                    <b><p>Price&nbsp; : &nbsp;</b>&#8377; 9,000</p>
+                    <button class="detbtn4">More Details</button><button class="imgbtn4">More Photos</button><button class="orbtn1" onclick="mobile4()">Order</button>
+                    <p><li class="details4">4 GB RAM | 128 GB ROM | Expandable Upto 1 TB </li>
+                        <li class="details4">16.66 cm (6.56 inch) HD+ Display</li>
+                        <li class="details4">50MP + 2MP | 8MP Front Camera</li>
+                        <li class="details4">Mediatek Helio G35 Processor</li> 
+                    </p>
+                </div>
+                <div class="proimgs4">
+                    <img src="r1.jpg">
+                    <img src="r2.jpg">
+                    <img src="r3.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="procon-container">
+            <div class="procon">
+                <div class="proimg5">
+                    <img src="realmeC15.jpg">
+                </div>
+                <div class="prodet5">
+                    <h3>Real Me C15</h3>
+                    <b><p>Price&nbsp; : &nbsp;</b>&#8377; 12,000</p>
+                    <button class="detbtn5">More Details</button><button class="imgbtn5">More Photos</button><button class="orbtn1" onclick="mobile5()">Order</button>
+                    <p><li class="details5">6.5" 720x1600 pixels</li>
+                        <li class="details5">13MP 1080p</li> 
+                        <li class="details5">3/4GB RAM Helio G35</li>
+                        <li class="details5">6000mAh</li>
+                    </p>    
+                </div>
+                <div class="proimgs5">
+                    <img src="c1.jpg">
+                    <img src="c2.jpg">
+                    <img src="c3.jpg">
+                </div>
+            </div>
+            <div class="procon">
+                <div class="proimg6">
+                    <img src="realme C11.jpg">
+                </div>
+                <div class="prodet6">
+                    <h3>Real Me C11</h3>
+                    <b><p>Price&nbsp; : &nbsp;</b>&#8377; 9,900</p>
+                    <button class="detbtn6">More Details</button><button class="imgbtn6">More Photos</button><button class="orbtn1" onclick="mobile6()">Order</button>
+                    <p><li class="details6">2 GB RAM | 32 GB ROM | </li>
+                        <li class="details6">16.51 cm (6.5 inch) HD+ Display</li>
+                        <li class="details6">5000 mAh Battery</li>
+                        <li class="details6">Octa-core Processor</li>
+                    </p>
+                </div>
+                <div class="proimgs6">
+                    <img src="r1.jpg">
+                    <img src="r2.jpg">
+                    <img src="r3.jpg">
+                </div>
+            </div>
+        </div>
+            <div class="procon-container">
+                <div class="procon">
+                    <div class="proimg7">
+                        <img src="Samsung Galaxy Z Fold3 5G .jpg">
+                    </div>
+                    <div class="prodet7">
+                        <h3>Samsung Galaxy Z Fold3 5G</h3>
+                        <b><p>Price&nbsp; : &nbsp;</b>&#8377; 64,990</p>
+                        <button class="detbtn7">More Details</button><button class="imgbtn7">More Photos</button><button class="orbtn1" onclick="mobile7()">Order</button>
+                        <p><li class="details7">12 GB RAM | 256 GB ROM</li>
+                            <li class="details7">15.75 cm (6.2 inch) Display </li>
+                            <li class="details7">50MP + 12MP + 10MP</li>
+                            <li class="details7">Snapdragon 8 Gen 2 Processor</li>
+                        </p>    
+                    </div>
+                    <div class="proimgs7">
+                        <img src="sf1.jpg">
+                        <img src="sf2.jpg">
+                        <img src="sf3.jpg">
+                    </div>
+                </div>
+                <div class="procon">
+                    <div class="proimg8">
+                        <img src="Samsung Galaxy S20 FE 5G.jpg">
+                    </div>
+                    <div class="prodet8">
+                        <h3>Samsung Galaxy S20 FE 5G</h3>
+                        <b><p>Price&nbsp; : &nbsp;</b>&#8377; 30,900</p>
+                        <button class="detbtn8">More Details</button><button class="imgbtn8">More Photos</button><button class="orbtn1" onclick="mobile8()">Order</button>
+                        <p><li class="details8">8 GB RAM | 128 GB ROM</li>
+                            <li class="details8">16.51 cm (6.5 inch) Display</li>
+                            <li class="details8">12MP Rear Camer</li>
+                            <li class="details8"> 4500 mAh Battery</li>
+                        </p>
+                    </div>
+                    <div class="proimgs8">
+                        <img src="se1.jpg">
+                        <img src="se2.jpg">
+                        <img src="se3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="procon-container">
+                <div class="procon">
+                    <div class="proimg9">
+                        <img src="OnePlus 10R 5G .jpg">
+                    </div>
+                    <div class="prodet5">
+                        <h3> OnePlus 10R 5G</h3>
+                        <b><p>Price&nbsp; : &nbsp;</b>&#8377; 27,900</p>
+                        <button class="detbtn9">More Details</button><button class="imgbtn9">More Photos</button><button class="orbtn1" onclick="mobile9()">Order</button>
+                        <p><li class="details9">12 GB RAM | 256 GB ROM</li>
+                            <li class="details9"> 17.02 cm (6.7 inch) Display</li>
+                            <li class="details9">50MP Rear Camera</li>
+                            <li class="details9">4500 mAh Battery</li>
+                        </p>    
+                    </div>
+                    <div class="proimgs9">
+                        <img src="o1.jpg">
+                        <img src="o2.jpg">
+                        <img src="o3.jpg">
+                    </div>
+                </div>
+                <div class="procon">
+                    <div class="proimg10">
+                        <img src="iphone1.jpeg">
+                    </div>
+                    <div class="prodet10">
+                        <h3>Apple Iphone 15</h3>
+                        <b><p>Price&nbsp; : &nbsp;</b>&#8377; 79,990</p>
+                        <button class="detbtn10">More Details</button><button class="imgbtn10">More Photos</button><button class="orbtn1" onclick="mobile10()">Order</button>
+                        <p><li class="details10">6.1-inch and 6.7-inch</li>
+                            <li class="details10">1 iPhone 15</li>
+                            <li class="details10">and iPhone 15 Plus</li>
+                            <li class="details10">feature the Dynamic</li>
+                        </p>
+                    </div>
+                    <div class="proimgs10">
+                        <img src="a151.jpg">
+                        <img src="a152.jpg">
+                        <img src="a153.jpg">
+                    </div>
+                </div>
+            </div>  
+            <footer class="footer-distributed">
+
+                <div class="footer-left">
+                    <h3>The <span>Creative</span> Hub</h3>
+        
+                    <p class="footer-links">
+                        <a href="home.html">Home</a>
+                        |
+                        <a href="laptop.html">Laptops</a>
+                        |
+                        <a href="homeappliances.html">Home Appliances</a>
+                        |
+                        <a href="mobile.html">Mobiles</a>
+                        |
+                        <a href="about.html">About</a>
+                    </p>
+        
+                    <p class="footer-company-name">Copyright © 2024 <strong>The Creative hub</strong> All rights reserved</p>
+                </div>
+        
+                <div class="footer-center">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>Ahmedabad</span>Gujarat</p>
+                    </div>
+        
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>+91 8849721477</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:thecreativehub.03@gmail.com">thecreativehub.03@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-company-about">
+                        <span>About the company</span>
+                        <strong>The Creative Hub</strong> Elevate Every Click. Your Style, Your Tech, Your Home – Unleash the Exceptional!.
+                    </p>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </body>
+</html>

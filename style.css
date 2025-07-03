@@ -1,0 +1,102 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;300&display=swap'); */
+
+body {
+    background-image: url(bgpic.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    color:#010101;
+  }
+   
+   .signup-all{
+    margin-left: 25px ;
+  } 
+
+  .signup-box {
+    width: 360px;
+    height: 550px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.427);
+    border-radius: 10px 20px;
+
+  }
+   .login-all{
+    margin-left: 50px;
+    display: none;
+  } 
+
+  .login-box {
+    width: 360px;
+    height: 350px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.427);
+    border-radius: 10px 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    float: left;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 2px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  input[type="button"] ,  input[type="submit"]  {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    color: white;
+    font-size: 18px;
+  }
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+  .para-1 {
+    text-align: center;
+    color: #020202;
+    font-size: 15px;
+    margin-top: -70px;
+  }
+  .para-2 {
+    text-align: center;
+    color: #020202;
+    font-size: 15px;
+    margin-top: -50px;
+  }
+  a {
+    color: #49c1a2;
+  }
+  .boxes{
+    display: flex;
+    margin: 50px 0 0 500px;
+    background-color: #008cff00;
+    height: 90%;
+    width: 60%;
+  }

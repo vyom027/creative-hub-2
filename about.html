@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <script src="animation.js"></script>
+    <link rel="stylesheet" href="about.css">
+    <title>About Us - Your E-Store</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="logo1.png" id="log" alt=""></div>        
+        <nav class="navigation">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Products</a>
+                <ul>
+                    <li><a href="mobile.html">Mobile Phones</a></li>
+                    <li><a href="laptop.html"> Laptop </a> </li>
+                    <li><a href="homeappliances.html">Home Appliances</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a class="feed">FeedBack</a></li>
+            <li><a href="index.html">Log Out</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="feedback">
+        <div class="container_feed">
+            <form action="about.html" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="feed_name" name="name" placeholder="Enter Name">
+                <label for="email">Email:</label>
+                <input type="pass" id="feed_email" name="email" placeholder="Enter Email Address">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="3">3 - Good</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="1">1 - Poor</option>
+                </select>
+    
+                <label for="comments">Comments:</label>
+                <textarea id="feed_comment" name="comments" rows="3" placeholder="Write Your Comments Here"></textarea>
+    
+                <div class="product-feedback">
+                    <label for="product">Product Feedback (optional):</label>
+                    <input type="text" id="product" name="product">
+    
+                    <label for="improvements">Suggestions for Improvements (optional):</label>
+                    <textarea id="improvements" name="improvements" rows="3"></textarea>
+                </div>
+    
+                <div class="checkbox-container">
+                    <input type="checkbox" id="subscribe" name="subscribe" checked>
+                    <label>Subscribe to receive future updates</label>
+                </div>
+    
+                <button type="submit" onclick=" return feedback()">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+    <center><h1 class="heading">About Us</h1></center>
+    <main>
+        <div class="card">
+            <section class="brand-story">
+                <h2>Our Brand Story</h2>
+                <p>Founded with a vision to revolutionize the online shopping experience, Your E-Store was born out of a passion for connecting people with quality products. Our journey began with a simple idea: to create a platform where shopping isn't just a transaction but an exploration of style, innovation, and inspiration.</p>
+                <p>Driven by this vision, we've grown into a community that values not only the products we offer but the experiences they bring. From the excitement of discovering the latest trends to the joy of finding a well-crafted item, Your E-Store is a destination where your unique style is celebrated.</p>
+            </section>
+        </div>
+
+        <div class="card">
+            <section class="mission">
+                <h2>Our Mission</h2>
+                <p>At Your E-Store, our mission is to empower individuals to express their unique style effortlessly. We strive to provide a diverse and curated selection of products that not only meet high standards of quality but also resonate with our customers' individual tastes and preferences.</p>
+                <p>We are committed to creating an inclusive space where everyone can find products that enhance their lifestyle. Our mission goes beyond transactions; it's about fostering a sense of community and self-expression through the products we offer.</p>
+            </section>
+        </div>
+
+        <div class="card">
+            <section class="product-philosophy">
+                <h2>Product Philosophy</h2>
+                <p>We believe in the beauty of thoughtful design, quality craftsmanship, and the joy that a well-chosen product can bring. Each item in our collection is carefully selected, not just for its functionality, but for the experience it adds to your life.</p>
+                <p>Our product philosophy revolves around the idea that every product tells a story. Whether it's a piece of clothing, an electronic gadget, or a home decor item, we want our customers to feel a connection to the items they bring into their lives through Your E-Store.</p>
+            </section>
+        </div>
+
+        <div class="card">
+            <section class="contact-us">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! If you have any questions, suggestions, or just want to say hello, feel free to reach out using the contact form below. Our dedicated team is here to assist you and ensure that your experience with Your E-Store is nothing short of exceptional.</p>
+
+                <form action="home.html" onsubmit="return contect()" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="con_name" name="con_name" placeholder="Enter Name..">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="con_email" name="con_email" placeholder="Enter E-mail Address">
+
+                    <label for="message">Message:</label>
+                    <textarea id="con_message" name="message" placeholder="Enter Message" ></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>The <span>Creative</span> Hub</h3>
+
+            <p class="footer-links">
+                <a href="home.html">Home</a>
+                |
+                <a href="laptop.html">Laptops</a>
+                |
+                <a href="homeappliances.html">Home Appliances</a>
+                |
+                <a href="mobile.html">Mobiles</a>
+                |
+                <a href="about.html">About</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2024 <strong>The Creative hub</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Ahmedabad</span>Gujarat</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 8849721477 <br>+91 8469407881<br>+91 7383353273</p><br>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:thecreativehub.03@gmail.com">thecreativehub.03@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>The Creative Hub</strong> Elevate Every Click. Your Style, Your Tech, Your Home – Unleash the Exceptional!.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
